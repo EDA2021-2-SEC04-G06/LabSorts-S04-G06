@@ -85,6 +85,7 @@ def printSortResults(ord_books, sample=10):
     # TODO completar modificaciones para el laboratorio 4
     pass
 
+
 catalog = None
 
 """
@@ -123,7 +124,8 @@ while True:
         size = input("Indique tamaño de la muestra: ")
         result = controller.sortBooks(catalog, int(size))
         print("Para la muestra de", size, " elementos, el tiempo (mseg) es: ",
-                                          str(result))
+                                          str(result[0]))
+        printSortResults(result[1])
 
     else:
         sys.exit(0)
